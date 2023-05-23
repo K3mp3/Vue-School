@@ -20,7 +20,7 @@
             <plan name="Super"></plan>
         </div>
     </div>
-    <script type="text/x-template" id="plan-template">
+    <script type="text/x-template" id="plan-picker-item-template">
         <div class="plan" :class="{'active-plan' : selected}" @click="select">
             <div class="description">
                 <span class="title">
@@ -31,7 +31,7 @@
     </script>
     <script type="text/x-template" id="plan-picker-template">
         <div class="plans">
-            <plan 
+            <planPickerItem 
                 v-for="plan in plans" 
                 :name="plan"
                 :selected="plan === selectedPlan"
